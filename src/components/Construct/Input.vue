@@ -1,5 +1,5 @@
 <script lang="ts">
-import { computed, defineComponent } from 'vue'
+import { computed, defineComponent, useSlots } from 'vue'
 
 export default defineComponent({
 	name: 'ConstructInput',
@@ -7,6 +7,7 @@ export default defineComponent({
 </script>
 
 <script setup lang="ts">
+const slots = useSlots()
 const props = defineProps<{
 	modelValue: any
 	id: string
@@ -29,6 +30,16 @@ const value = computed({
 		v-bind="props"
 		class="construct-input"
 	>
+		<template
+			v-if="slots.label"
+			#label="labelProps"
+		>
+			<component
+				:is="slots.label"
+				v-bind="labelProps"
+			/>
+		</template>
+
 		<input
 			v-model="value"
 			:id="props.id"
@@ -43,10 +54,7 @@ const value = computed({
 		width: 100%;
 		padding: 0.5em;
 		border: 1px solid black;
-		border-radius: 0.25em;
-
-		transform: scale(1);
-		transition: all 0.25s;
+		border-radius: $border-radius;
 	}
 }
 </style>

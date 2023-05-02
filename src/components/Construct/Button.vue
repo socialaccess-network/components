@@ -26,14 +26,5 @@ export default defineComponent({
 	font-weight: bold;
 
 	cursor: pointer;
-	transform: scale(1);
-	transition: all 0.25s;
-
-	&:hover,
-	&:focus {
-		&:not(:active):not(:disabled) {
-			transform: scale(1.05);
-		}
-	}
 }
 </style>

@@ -19,7 +19,9 @@ const props = defineProps<{
 		<slot
 			v-if="props.label"
 			name="label"
+			:id="props.id"
 			:label="props.label"
+			:options="props.options"
 		>
 			<label
 				class="input-label"
@@ -37,21 +39,30 @@ const props = defineProps<{
 </template>
 
 <style lang="scss" scoped>
+$input-color: var(--construct-input-color, black);
+$input-background: var(--construct-input-background, white);
+$input-border-color: var(--construct-input-border-color, black);
+
 .construct-input-box {
 	@include flex(column);
-	row-gap: 0.25em;
+	row-gap: 0.3em;
 	border: none;
 	margin: 0px;
-	padding: 0px;
+	padding: 0.5em;
+
+	color: $input-color;
+	background-color: $input-background;
+	border: 1px solid $input-border-color;
+	border-radius: $border-radius;
+
+	.input-label,
+	.input-area {
+		width: 100%;
+	}
 
 	.input-label {
 		@include flex(row, flex-start, center);
-		width: 100%;
 		column-gap: 0.25em;
-	}
-
-	.input-area {
-		width: 100%;
 	}
 }
 </style>

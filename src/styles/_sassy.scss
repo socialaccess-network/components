@@ -1,5 +1,7 @@
 // this file is included automatically in every component that as a scss style block
 
+$border-radius: var(--construct-border-radius, 5px);
+
 @mixin flex($direction: row, $justify: flex-start, $align: flex-start) {
 	display: flex;
 	flex-direction: $direction;

@@ -2,7 +2,7 @@
 import { computed, defineComponent, useSlots } from 'vue'
 
 export default defineComponent({
-	name: 'ConstructTextArea',
+	name: 'ConstructRadioSelect',
 })
 </script>
 
@@ -12,6 +12,13 @@ const props = defineProps<{
 	modelValue: any
 	id: string
 	label?: string
+	values: Array<{
+		id: string
+		value: any
+		label: string
+		disabled?: boolean
+		selected?: boolean
+	}>
 	options?: Record<string, string | boolean>
 }>()
 
@@ -28,7 +35,7 @@ const value = computed({
 <template>
 	<ConstructInputBox
 		v-bind="props"
-		class="construct-text-area"
+		class="construct-radio-select"
 	>
 		<template
 			v-if="slots.label"
@@ -40,24 +47,21 @@ const value = computed({
 			/>
 		</template>
 
-		<textarea
+		<ConstructRadioOption
+			v-for="option in props.values"
 			v-model="value"
-			:id="props.id"
-			v-bind="props.options"
+			v-bind="option"
+			:name="props.id"
+			:type="props.options?.multiple ? 'checkbox' : 'radio'"
 		/>
 	</ConstructInputBox>
 </template>
 
 <style lang="scss" scoped>
-.construct-text-area {
-	textarea {
-		width: 100%;
-		padding: 0.5em;
-		border: 1px solid black;
-		border-radius: 0.25em;
-
-		transform: scale(1);
-		transition: all 0.25s;
+.construct-radio-select {
+	:deep(.input-area) {
+		@include flex(column);
+		row-gap: 0.5em;
 	}
 }
 </style>
