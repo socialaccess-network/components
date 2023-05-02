@@ -14,3 +14,6 @@ export { default as ConstructTextArea } from './TextArea.vue'
 export { default as ConstructSelect } from './Select.vue'
 export { default as ConstructRadioSelect } from './RadioSelect.vue'
 export { default as ConstructRadioOption } from './RadioOption.vue'
+
+export { default as ConstructPillBox } from './PillBox.vue'
+export { default as ConstructTabs } from './Tabs.vue'
