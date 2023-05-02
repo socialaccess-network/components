@@ -14,6 +14,8 @@ declare module '@vue/runtime-core' {
     ConstructInputBox: typeof import('./src/components/Construct/InputBox.vue')['default']
     ConstructLayout: typeof import('./src/components/Construct/Layout.vue')['default']
     ConstructLink: typeof import('./src/components/Construct/Link.vue')['default']
+    ConstructMenu: typeof import('./src/components/Construct/Menu.vue')['default']
+    ConstructMenuItem: typeof import('./src/components/Construct/MenuItem.vue')['default']
     ConstructPage: typeof import('./src/components/Construct/Page.vue')['default']
     ConstructPillBox: typeof import('./src/components/Construct/PillBox.vue')['default']
     ConstructRadioOption: typeof import('./src/components/Construct/RadioOption.vue')['default']

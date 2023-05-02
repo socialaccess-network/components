@@ -9,6 +9,7 @@ export default defineComponent({
 <script setup lang="ts">
 const props = defineProps<{
 	to: string
+	options?: Record<string, any>
 }>()
 
 const isInternal = computed(() => props.to.startsWith('/'))
@@ -19,6 +20,7 @@ const attrName = computed(() => (isInternal.value ? 'to' : 'href'))
 <template>
 	<component
 		:is="tagName"
+		v-bind="props.options"
 		:[attrName]="props.to"
 		class="construct-link"
 	>

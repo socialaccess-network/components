@@ -3,6 +3,7 @@ export { default as ConstructPage } from './Page.vue'
 
 export { default as ConstructTitle } from './Title.vue'
 export { default as ConstructLink } from './Link.vue'
+export { default as ConstructMenu } from './Menu.vue'
 
 export { default as ConstructButton } from './Button.vue'
 

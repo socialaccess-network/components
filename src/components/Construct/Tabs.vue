@@ -56,6 +56,9 @@ function select(item: Item) {
 
 		:deep(.pill) {
 			flex: 1;
+
+			border-bottom-left-radius: 0px;
+			border-bottom-right-radius: 0px;
 		}
 	}
 }
