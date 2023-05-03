@@ -1,6 +1,6 @@
 {
 	"name": "@sa-net/components",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"packageManager": "yarn@3.3.0",
 	"type": "module",
 	"main": "dist/index.js",
@@ -18,9 +18,17 @@
 			"types": "./volar.d.ts"
 		}
 	},
+	"files": [
+		"src",
+		"dist",
+		"package.json",
+		"README.md",
+		"LICENSE"
+	],
 	"scripts": {
 		"dev": "vite build --watch",
-		"build": "vite build"
+		"build": "vite build",
+		"publish": "yarn build && yarn npm publish --access public"
 	},
 	"devDependencies": {
 		"@types/node": "^18.16.3",

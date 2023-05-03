@@ -64,5 +64,9 @@ $input-border-color: var(--construct-input-border-color, black);
 		@include flex(row, flex-start, center);
 		column-gap: 0.25em;
 	}
+
+	.input-area {
+		display: inherit;
+	}
 }
 </style>
