@@ -30,6 +30,11 @@ const value = computed({
 	get: () => props.modelValue,
 	set: value => emit('update:modelValue', value),
 })
+
+const type = computed(() => {
+	if (props.options?.multiple) return 'checkbox'
+	return 'radio'
+})
 </script>
 
 <template>
@@ -52,8 +57,18 @@ const value = computed({
 			v-model="value"
 			v-bind="option"
 			:name="props.id"
-			:type="props.options?.multiple ? 'checkbox' : 'radio'"
-		/>
+			:type="type"
+		>
+			<template
+				v-if="slots.icon"
+				#icon="iconProps"
+			>
+				<component
+					:is="slots.icon"
+					v-bind="iconProps"
+				/>
+			</template>
+		</ConstructRadioOption>
 	</ConstructInputBox>
 </template>
 

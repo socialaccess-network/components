@@ -6,10 +6,22 @@ export default defineComponent({
 })
 </script>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const props = withDefaults(
+	defineProps<{
+		type?: 'button' | 'submit' | 'reset'
+	}>(),
+	{
+		type: 'button',
+	},
+)
+</script>
 
 <template>
-	<button class="construct-button">
+	<button
+		:type="props.type"
+		class="construct-button"
+	>
 		<slot />
 	</button>
 </template>

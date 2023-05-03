@@ -45,10 +45,10 @@ $input-border-color: var(--construct-input-border-color, black);
 
 .construct-input-box {
 	@include flex(column);
-	row-gap: 0.3em;
+	row-gap: 0.5em;
 	border: none;
 	margin: 0px;
-	padding: 0.5em;
+	padding: 0.75em;
 
 	color: $input-color;
 	background-color: $input-background;
