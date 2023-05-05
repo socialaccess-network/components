@@ -55,9 +55,6 @@ const value = computed({
 		padding: 0.5em;
 		border: 1px solid black;
 		border-radius: 0.25em;
-
-		transform: scale(1);
-		transition: all 0.25s;
 	}
 }
 </style>

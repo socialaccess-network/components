@@ -31,6 +31,6 @@ const headerTag = computed(() => `h${props.level}`)
 <style lang="scss" scoped>
 .construct-title {
 	margin: 0px;
-	padding: 0.5em;
+	padding: 0.5em 0px;
 }
 </style>

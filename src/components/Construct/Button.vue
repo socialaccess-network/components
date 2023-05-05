@@ -32,7 +32,7 @@ const props = withDefaults(
 	padding: 0.5em 1em;
 
 	border: 1px solid black;
-	border-radius: 0.25em;
+	border-radius: $border-radius;
 
 	font-size: 0.8em;
 	font-weight: bold;
