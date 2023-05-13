@@ -18,3 +18,5 @@ export { default as ConstructRadioOption } from './RadioOption.vue'
 
 export { default as ConstructPillBox } from './PillBox.vue'
 export { default as ConstructTabs } from './Tabs.vue'
+
+export { default as ConstructScrollNotifier } from './ScrollNotifier.vue'

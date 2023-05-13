@@ -25,5 +25,7 @@ declare module '@vue/runtime-core' {
     ConstructTabs: typeof import('./src/components/Construct/Tabs.vue')['default']
     ConstructTextArea: typeof import('./src/components/Construct/TextArea.vue')['default']
     ConstructTitle: typeof import('./src/components/Construct/Title.vue')['default']
+    RouterLink: typeof import('vue-router')['RouterLink']
+    RouterView: typeof import('vue-router')['RouterView']
   }
 }
