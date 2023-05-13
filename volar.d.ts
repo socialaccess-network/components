@@ -21,6 +21,7 @@ declare module '@vue/runtime-core' {
     ConstructRadioOption: typeof import('./src/components/Construct/RadioOption.vue')['default']
     ConstructRadioSelect: typeof import('./src/components/Construct/RadioSelect.vue')['default']
     ConstructRequiredMark: typeof import('./src/components/Construct/RequiredMark.vue')['default']
+    ConstructScrollNotifier: typeof import('./src/components/Construct/ScrollNotifier.vue')['default']
     ConstructSelect: typeof import('./src/components/Construct/Select.vue')['default']
     ConstructTabs: typeof import('./src/components/Construct/Tabs.vue')['default']
     ConstructTextArea: typeof import('./src/components/Construct/TextArea.vue')['default']
