@@ -1,5 +1,7 @@
 <script lang="ts">
+import { isString } from '@michealpearce/utils'
 import { computed, defineComponent } from 'vue'
+import type { RouteLocationRaw } from 'vue-router'
 
 export default defineComponent({
 	name: 'ConstructLink',
@@ -8,11 +10,13 @@ export default defineComponent({
 
 <script setup lang="ts">
 const props = defineProps<{
-	to: string
+	to: string | RouteLocationRaw
 	options?: Record<string, any>
 }>()
 
-const isInternal = computed(() => props.to.startsWith('/'))
+const isInternal = computed(() =>
+	isString(props.to) ? props.to.startsWith('/') : true,
+)
 const tagName = computed(() => (isInternal.value ? 'RouterLink' : 'a'))
 const attrName = computed(() => (isInternal.value ? 'to' : 'href'))
 </script>

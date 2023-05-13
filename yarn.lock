@@ -214,6 +214,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@michealpearce/utils@npm:^0.0.14":
+  version: 0.0.14
+  resolution: "@michealpearce/utils@npm:0.0.14"
+  checksum: 1d6d0f5278ae38e9264475d4b82306431acd4e1106b89cb08f88f47962ea3c8635bdfb722dcc015c9ff99b15a760a7c1a82cc1ce406e76a1bb4fe65d29dc6303
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -281,6 +288,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@sa-net/components@workspace:."
   dependencies:
+    "@michealpearce/utils": ^0.0.14
     "@types/node": ^18.16.3
     "@vitejs/plugin-vue": ^4.2.1
     sass: ^1.62.1
@@ -288,6 +296,13 @@ __metadata:
     unplugin-vue-components: ^0.24.1
     vite: ^4.3.3
     vue: ^3.2.47
+    vue-router: ^4.2.0
+  peerDependencies:
+    vue: ^3
+    vue-router: ^4
+  peerDependenciesMeta:
+    vue-router:
+      optional: true
   languageName: unknown
   linkType: soft
 
@@ -369,6 +384,13 @@ __metadata:
     "@vue/compiler-dom": 3.2.47
     "@vue/shared": 3.2.47
   checksum: 91bc6e46744d5405713c08d8e576971aa6d13a0cde84ec592d3221bf6ee228e49ce12233af8c18dc39723455b420df2951f3616ceb99758eb432485475fa7bc2
+  languageName: node
+  linkType: hard
+
+"@vue/devtools-api@npm:^6.5.0":
+  version: 6.5.0
+  resolution: "@vue/devtools-api@npm:6.5.0"
+  checksum: ec819ef3a426e91d09e9cfefd2827e9ed8ec9d62bb3b3e0674f3da8c7e92a4b879c3b777dc7329172ca6fe2670b62dd5580d23160339208f0f5ae038f2e504ad
   languageName: node
   linkType: hard
 
@@ -1837,6 +1859,17 @@ __metadata:
   bin:
     vite: bin/vite.js
   checksum: 99970cb1fed3330458e60f8341ec73c4260c82d815e51c95295321ab496e4c8cb447bc942daf4d94f78bbc8b2bed36cbc237f43fdc1cede19250fac737e5a0fc
+  languageName: node
+  linkType: hard
+
+"vue-router@npm:^4.2.0":
+  version: 4.2.0
+  resolution: "vue-router@npm:4.2.0"
+  dependencies:
+    "@vue/devtools-api": ^6.5.0
+  peerDependencies:
+    vue: ^3.2.0
+  checksum: 2ae40a4dd86e9abf50596cf779640daf61da8d668ffccf063ccc8762f95149eec6784700a4f2aa9d8854b4a6a885f2e300ddc84e5c4069dbd4a6b0cfed9d8e1a
   languageName: node
   linkType: hard
 
